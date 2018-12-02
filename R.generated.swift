@@ -31,8 +31,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 0 images.
+  /// This `R.image` struct is generated, and contains static references to 1 images.
   struct image {
+    /// Image `ChuckNorris`.
+    static let chuckNorris = Rswift.ImageResource(bundle: R.hostingBundle, name: "ChuckNorris")
+    
+    /// `UIImage(named: "ChuckNorris", bundle: ..., traitCollection: ...)`
+    static func chuckNorris(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.chuckNorris, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
@@ -41,13 +49,31 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `UglyCell`.
+    static let uglyCell: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "UglyCell")
+    
     fileprivate init() {}
   }
   
-  /// This `R.segue` struct is generated, and contains static references to 0 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
   struct segue {
+    /// This struct is generated for `ViewController`, and contains static references to 1 segues.
+    struct viewController {
+      /// Segue identifier `showTableView`.
+      static let showTableView: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, ViewController, TableViewController> = Rswift.StoryboardSegueIdentifier(identifier: "showTableView")
+      
+      /// Optionally returns a typed version of segue `showTableView`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func showTableView(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, ViewController, TableViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.viewController.showTableView, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   
@@ -71,8 +97,57 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 0 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 3 localization tables.
   struct string {
+    /// This `R.string.l10n` struct is generated, and contains static references to 3 localization keys.
+    struct l10n {
+      /// en translation: %@ is in the %@
+      /// 
+      /// Locales: en, fr
+      static let isInThe = Rswift.StringResource(key: "isInThe", tableName: "L10n", bundle: R.hostingBundle, locales: ["en", "fr"], comment: nil)
+      /// en translation: Where is %@ ?
+      /// 
+      /// Locales: en, fr
+      static let whereIs = Rswift.StringResource(key: "whereIs", tableName: "L10n", bundle: R.hostingBundle, locales: ["en", "fr"], comment: nil)
+      /// en translation: kitchen
+      /// 
+      /// Locales: en, fr
+      static let kitchen = Rswift.StringResource(key: "kitchen", tableName: "L10n", bundle: R.hostingBundle, locales: ["en", "fr"], comment: nil)
+      
+      /// en translation: %@ is in the %@
+      /// 
+      /// Locales: en, fr
+      static func isInThe(_ value1: String, _ value2: String) -> String {
+        return String(format: NSLocalizedString("isInThe", tableName: "L10n", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1, value2)
+      }
+      
+      /// en translation: Where is %@ ?
+      /// 
+      /// Locales: en, fr
+      static func whereIs(_ value1: String) -> String {
+        return String(format: NSLocalizedString("whereIs", tableName: "L10n", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
+      }
+      
+      /// en translation: kitchen
+      /// 
+      /// Locales: en, fr
+      static func kitchen(_: Void = ()) -> String {
+        return NSLocalizedString("kitchen", tableName: "L10n", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.launchScreen` struct is generated, and contains static references to 0 localization keys.
+    struct launchScreen {
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.main` struct is generated, and contains static references to 0 localization keys.
+    struct main {
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   
@@ -105,7 +180,7 @@ struct _R {
     }
     
     struct main: Rswift.StoryboardResourceWithInitialControllerType {
-      typealias InitialController = ViewController
+      typealias InitialController = UIKit.UINavigationController
       
       let bundle = R.hostingBundle
       let name = "Main"
