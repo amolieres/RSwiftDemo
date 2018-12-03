@@ -13,6 +13,7 @@ struct R: Rswift.Validatable {
   fileprivate static let hostingBundle = Bundle(for: R.Class.self)
   
   static func validate() throws {
+    try font.validate()
     try intern.validate()
   }
   
@@ -21,13 +22,34 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 0 files.
+  /// This `R.file` struct is generated, and contains static references to 1 files.
   struct file {
+    /// Resource file `SedgwickAve-Regular.ttf`.
+    static let sedgwickAveRegularTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "SedgwickAve-Regular", pathExtension: "ttf")
+    
+    /// `bundle.url(forResource: "SedgwickAve-Regular", withExtension: "ttf")`
+    static func sedgwickAveRegularTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.sedgwickAveRegularTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.font` struct is generated, and contains static references to 0 fonts.
-  struct font {
+  /// This `R.font` struct is generated, and contains static references to 1 fonts.
+  struct font: Rswift.Validatable {
+    /// Font `SedgwickAve-Regular`.
+    static let sedgwickAveRegular = Rswift.FontResource(fontName: "SedgwickAve-Regular")
+    
+    /// `UIFont(name: "SedgwickAve-Regular", size: ...)`
+    static func sedgwickAveRegular(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sedgwickAveRegular, size: size)
+    }
+    
+    static func validate() throws {
+      if R.font.sedgwickAveRegular(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SedgwickAve-Regular' could not be loaded, is 'SedgwickAve-Regular.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+    }
+    
     fileprivate init() {}
   }
   
@@ -49,11 +71,8 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
   struct reuseIdentifier {
-    /// Reuse identifier `UglyCell`.
-    static let uglyCell: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "UglyCell")
-    
     fileprivate init() {}
   }
   
@@ -61,14 +80,14 @@ struct R: Rswift.Validatable {
   struct segue {
     /// This struct is generated for `ViewController`, and contains static references to 1 segues.
     struct viewController {
-      /// Segue identifier `showTableView`.
-      static let showTableView: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, ViewController, TableViewController> = Rswift.StoryboardSegueIdentifier(identifier: "showTableView")
+      /// Segue identifier `showDetail`.
+      static let showDetail: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, ViewController, DetailViewController> = Rswift.StoryboardSegueIdentifier(identifier: "showDetail")
       
-      /// Optionally returns a typed version of segue `showTableView`.
+      /// Optionally returns a typed version of segue `showDetail`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func showTableView(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, ViewController, TableViewController>? {
-        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.viewController.showTableView, segue: segue)
+      static func showDetail(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, ViewController, DetailViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.viewController.showDetail, segue: segue)
       }
       
       fileprivate init() {}

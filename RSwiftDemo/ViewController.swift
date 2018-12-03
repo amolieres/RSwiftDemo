@@ -17,25 +17,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.mainLabel.text = String(format: NSLocalizedString("whereIs", tableName: "L10n", comment: ""), "bryan")
-        self.mainImageView.image = UIImage(named: "ChuckNorris")
+        mainLabel.text = String(format: NSLocalizedString("whereIs", tableName: "L10n", comment: ""), "bryan")
+        mainLabel.font = UIFont(name: "SedgwickAve-Regular", size: 30)
+        mainImageView.image = UIImage(named: "ChuckNorris")
         
         // With R.Swift
         //self.mainImageView.image = R.image.chuckNorris()
-        //self.mainLabel.text = R.string.l10n.whereIs("bryan")
+        //mainLabel.font = R.font.sedgwickAveRegular(size: 30)
+        self.mainLabel.text = R.string.l10n.whereIs("bryan")
     
     }
 
     @IBAction func goButtonTouch(_ sender: Any) {
-        performSegue(withIdentifier: "showTableView", sender: self)
+        performSegue(withIdentifier: "showDetail", sender: self)
         
         // With R.Swift
-        //performSegue(withIdentifier: R.segue.viewController.showTableView, sender: self)
+        performSegue(withIdentifier: R.segue.viewController.showDetail, sender: self)
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let view = segue.destination as? TableViewController {
+        if let view = segue.destination as? DetailViewController {
             view.title = self.mainLabel.text
         }
     }
