@@ -55,12 +55,12 @@ struct R: Rswift.Validatable {
   
   /// This `R.image` struct is generated, and contains static references to 1 images.
   struct image {
-    /// Image `ChuckNorris`.
-    static let chuckNorris = Rswift.ImageResource(bundle: R.hostingBundle, name: "ChuckNorris")
+    /// Image `ChuckNoris`.
+    static let chuckNoris = Rswift.ImageResource(bundle: R.hostingBundle, name: "ChuckNoris")
     
-    /// `UIImage(named: "ChuckNorris", bundle: ..., traitCollection: ...)`
-    static func chuckNorris(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.chuckNorris, compatibleWith: traitCollection)
+    /// `UIImage(named: "ChuckNoris", bundle: ..., traitCollection: ...)`
+    static func chuckNoris(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.chuckNoris, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -123,11 +123,11 @@ struct R: Rswift.Validatable {
       /// en translation: %@ is in the %@
       /// 
       /// Locales: en
-      static let isInThe = Rswift.StringResource(key: "isInThe", tableName: "L10n", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      static let isinthe = Rswift.StringResource(key: "isinthe", tableName: "L10n", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Where is %@ ?
       /// 
       /// Locales: en
-      static let whereIs = Rswift.StringResource(key: "whereIs", tableName: "L10n", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      static let whereis = Rswift.StringResource(key: "whereis", tableName: "L10n", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: kitchen
       /// 
       /// Locales: en
@@ -136,15 +136,15 @@ struct R: Rswift.Validatable {
       /// en translation: %@ is in the %@
       /// 
       /// Locales: en
-      static func isInThe(_ value1: String, _ value2: String) -> String {
-        return String(format: NSLocalizedString("isInThe", tableName: "L10n", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1, value2)
+      static func isinthe(_ value1: String, _ value2: String) -> String {
+        return String(format: NSLocalizedString("isinthe", tableName: "L10n", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1, value2)
       }
       
       /// en translation: Where is %@ ?
       /// 
       /// Locales: en
-      static func whereIs(_ value1: String) -> String {
-        return String(format: NSLocalizedString("whereIs", tableName: "L10n", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
+      static func whereis(_ value1: String) -> String {
+        return String(format: NSLocalizedString("whereis", tableName: "L10n", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
       }
       
       /// en translation: kitchen
