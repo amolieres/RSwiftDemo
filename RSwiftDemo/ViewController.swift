@@ -17,22 +17,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainLabel.text = String(format: NSLocalizedString("whereIs", tableName: "L10n", comment: ""), "bryan")
-        mainLabel.font = UIFont(name: "SedgwickAve-Regular", size: 30)
-        mainImageView.image = UIImage(named: "ChuckNorris")
-        
-        // With R.Swift
-        //self.mainImageView.image = R.image.chuckNorris()
-        //mainLabel.font = R.font.sedgwickAveRegular(size: 30)
-        self.mainLabel.text = R.string.l10n.whereIs("bryan")
+        // TODO: Fill UI
     
     }
 
     @IBAction func goButtonTouch(_ sender: Any) {
-        performSegue(withIdentifier: "showDetail", sender: self)
-        
-        // With R.Swift
-        performSegue(withIdentifier: R.segue.viewController.showDetail, sender: self)
+        // TODO: Perform segue ?
+
     }
     
     
@@ -41,6 +32,39 @@ class ViewController: UIViewController {
             view.title = self.mainLabel.text
         }
     }
+    
+    
+    
+    
+    
+    /*
+     -----------
+     Without R.swift
+     -----------
+     
+     mainLabel.text = String(format: NSLocalizedString("whereIs", tableName: "L10n", comment: ""), "bryan")
+     mainLabel.font = UIFont(name: "SedgwickAve-Regular", size: 30)
+     mainImageView.image = UIImage(named: "ChuckNorris")
+     
+     
+     performSegue(withIdentifier: "showDetail", sender: self)
+     
+     */
+    /*
+     -----------
+     With R.swift
+     -----------
+
+     mainImageView.image = R.image.chuckNorris()
+     mainLabel.font = R.font.sedgwickAveRegular(size: 30)
+     mainLabel.text = R.string.l10n.whereIs("bryan")
+     
+ 
+     performSegue(withIdentifier: R.segue.viewController.showDetail, sender: self)
+ 
+    */
+    
+    
     
 }
 

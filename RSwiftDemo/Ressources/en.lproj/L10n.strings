@@ -6,6 +6,6 @@
   Copyright © 2018 amolieres. All rights reserved.
 */
 
-"whereIs" = "Where is %@ ?";
-"isInThe" = "%@ is in the %@";
+"whereis" = "Where is %@ ?";
+"isinthe" = "%@ is in the %@";
 "kitchen" = "kitchen";

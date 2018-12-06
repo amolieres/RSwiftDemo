@@ -47,9 +47,7 @@
 		86CE450E86FA67709CCAD494 /* Pods-RSwiftDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSwiftDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSwiftDemoUITests/Pods-RSwiftDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		97DBB82000DE8DCC8F23AC30 /* Pods_RSwiftDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSwiftDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1FB69B21B3491000980F16 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		9F1FB69C21B3491000980F16 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		9F1FB6A421B3499D00980F16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/L10n.strings; sourceTree = "<group>"; };
-		9F1FB6A621B349A200980F16 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/L10n.strings; sourceTree = "<group>"; };
 		9F1FB6A921B462C800980F16 /* SedgwickAve-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SedgwickAve-Regular.ttf"; path = "../../../../Downloads/SedgwickAve-Regular.ttf"; sourceTree = "<group>"; };
 		9F1FB6AB21B4681A00980F16 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = RSwiftDemo/DetailViewController.swift; sourceTree = SOURCE_ROOT; };
 		9F1FB6AD21B46A4200980F16 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -487,7 +485,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				9F1FB6A421B3499D00980F16 /* en */,
-				9F1FB6A621B349A200980F16 /* fr */,
 			);
 			name = L10n.strings;
 			sourceTree = "<group>";
@@ -496,7 +493,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				9F43E8D821B3380300F5013D /* Base */,
-				9F1FB69C21B3491000980F16 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

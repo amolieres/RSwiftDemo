@@ -116,40 +116,40 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 3 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 2 localization tables.
   struct string {
     /// This `R.string.l10n` struct is generated, and contains static references to 3 localization keys.
     struct l10n {
       /// en translation: %@ is in the %@
       /// 
-      /// Locales: en, fr
-      static let isInThe = Rswift.StringResource(key: "isInThe", tableName: "L10n", bundle: R.hostingBundle, locales: ["en", "fr"], comment: nil)
+      /// Locales: en
+      static let isInThe = Rswift.StringResource(key: "isInThe", tableName: "L10n", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Where is %@ ?
       /// 
-      /// Locales: en, fr
-      static let whereIs = Rswift.StringResource(key: "whereIs", tableName: "L10n", bundle: R.hostingBundle, locales: ["en", "fr"], comment: nil)
+      /// Locales: en
+      static let whereIs = Rswift.StringResource(key: "whereIs", tableName: "L10n", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: kitchen
       /// 
-      /// Locales: en, fr
-      static let kitchen = Rswift.StringResource(key: "kitchen", tableName: "L10n", bundle: R.hostingBundle, locales: ["en", "fr"], comment: nil)
+      /// Locales: en
+      static let kitchen = Rswift.StringResource(key: "kitchen", tableName: "L10n", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       
       /// en translation: %@ is in the %@
       /// 
-      /// Locales: en, fr
+      /// Locales: en
       static func isInThe(_ value1: String, _ value2: String) -> String {
         return String(format: NSLocalizedString("isInThe", tableName: "L10n", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1, value2)
       }
       
       /// en translation: Where is %@ ?
       /// 
-      /// Locales: en, fr
+      /// Locales: en
       static func whereIs(_ value1: String) -> String {
         return String(format: NSLocalizedString("whereIs", tableName: "L10n", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
       }
       
       /// en translation: kitchen
       /// 
-      /// Locales: en, fr
+      /// Locales: en
       static func kitchen(_: Void = ()) -> String {
         return NSLocalizedString("kitchen", tableName: "L10n", bundle: R.hostingBundle, comment: "")
       }
@@ -159,11 +159,6 @@ struct R: Rswift.Validatable {
     
     /// This `R.string.launchScreen` struct is generated, and contains static references to 0 localization keys.
     struct launchScreen {
-      fileprivate init() {}
-    }
-    
-    /// This `R.string.main` struct is generated, and contains static references to 0 localization keys.
-    struct main {
       fileprivate init() {}
     }
     
